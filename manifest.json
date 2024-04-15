@@ -1,0 +1,16 @@
+{
+  "name": "Bias be Gone",
+  "description": "Basic Chrome Extension",
+  "version": "1.0",
+  "manifest_version": 3,
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "My first extension"
+  },
+  "permissions": [ "activeTab", "storage", "declarativeContent", "tabs", "scripting", "storage"],
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  }
+}
+
